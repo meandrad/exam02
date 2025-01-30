@@ -11,9 +11,3 @@ void	ft_putstr(char *s)
 		i++;
 	}
 }
-
-int main(void)
-{
-	ft_putstr("Oi tudo bem?");
-	return (0);
-}
