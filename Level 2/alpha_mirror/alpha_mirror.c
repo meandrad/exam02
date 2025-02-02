@@ -1,21 +1,35 @@
 #include <unistd.h>
 
-int main(int argc, char **argv)
+void	ft_mirrorup(char c)
 {
-	int i = 0;
+	c = 90 - c + 65;
+	write(1, &c, 1);
+}
 
-	if (argc == 2)
+void	ft_mirrorlow(char c)
+{
+	c = 122 - c + 97;
+	write (1, &c, 1);
+}
+
+int main (int argc, char *argv[])
+{
+	int i;
+
+	i = 0;
+	if (argc ==2)
 	{
-		while(argv[1][i]) 
+		while (argv[1][i] != '\0')
 		{
-			if(argv[1][i] >= 'a' && argv[1][i] <= 'z')
-				argv[1][i] = ('a' + 'z') - argv[1][i];
-			else if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')
-				argv[1][i] = ('A' + 'Z') - argv[1][i];
-			write(1, &argv[1][i], 1);
+			if (argv[1][i] >= 65 && argv[1][i] <= 90)
+				ft_mirrorup(argv[1][i]);
+			else if (argv[1][i] >= 97 && argv[1][i] <= 122)
+				ft_mirrorlow(argv[1][i]);
+			else
+				write(1, &argv[1][i], 1);
 			i++;
 		}
 	}
-	write (1,"\n",1);
+	write (1, "\n", 1);
 	return (0);
-}		
+}
