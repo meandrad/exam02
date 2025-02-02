@@ -9,7 +9,7 @@ int ft_strlen(char *str)
 		i++;
 	return (i);
 }
-char	*ft_search(char *str, char *a, char *b)
+void	ft_search(char *str, char *a, char *b)
 {
 	int i;
 
@@ -25,7 +25,6 @@ char	*ft_search(char *str, char *a, char *b)
 			write(1, &str[i], 1);
 		i++;
 	}
-	return (str);
 }
 
 int main (int argc, char *argv[])
