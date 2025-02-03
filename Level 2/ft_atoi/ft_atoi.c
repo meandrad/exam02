@@ -29,12 +29,4 @@ int	ft_atoi(const char *str)
 	}
 	return (result * flag);
 }
-#include <stdlib.h>
-#include <stdio.h>
 
-int main (void)
-{
-	int i;
-	i = ft_atoi("+-344");
-	printf("%d", i);
-}
