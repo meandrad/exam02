@@ -17,8 +17,6 @@ int	ft_atoi(const char *str)
 	flag = 1;
 	while (ft_isspace(str[i]) == 1)
 		i++;
-	if ((str[i] == '+') && (str[i + 1] != '-'))
-		i++;
 	if (str[i] == '-')
 	{
 		flag = -1;
@@ -30,4 +28,13 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (result * flag);
+}
+#include <stdlib.h>
+#include <stdio.h>
+
+int main (void)
+{
+	int i;
+	i = ft_atoi("+-344");
+	printf("%d", i);
 }
