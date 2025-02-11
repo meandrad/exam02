@@ -16,7 +16,7 @@ void ft_union(char *s1, char *s2)
 		if (lookup[(int)s1[i]] == 0)
 		{
 			lookup[(int)s1[i]] = 1;
-				ft_putchar(s1[i]);
+			ft_putchar(s1[i]);
 		}
 		i++;
 	}
