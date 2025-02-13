@@ -4,19 +4,24 @@ void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
-
+int	check(char c)
+{
+	if (c == 32 || c == 9)
+		return (1);
+	return (0);
+}
 void	epur_str(char *s)
 {
 	int	i;
 
 	i = 0;
-	while (s[i] == 32)
+	while (check(s[i]) == 1)
 		i++;
 	while (s[i] != '\0')
 	{
-		while (s[i] == 32 && s[i + 1] == 32)
+		while ((check(s[i]) == 1 && check(s[i + 1]) == 1))
 			i++;
-		if (s[i] != 32 || (s[i] == 32 && s[i + 1] != '\0'))
+		if (check(s[i]) == 0 || ((check(s[i]) == 1) && s[i + 1] != '\0'))
 			ft_putchar(s[i]);
 		i++;
 	}
