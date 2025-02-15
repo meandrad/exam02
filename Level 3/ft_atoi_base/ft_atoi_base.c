@@ -50,16 +50,3 @@ int	ft_atoi_base(const char *str, int str_base)
 	}
 	return (result * flag);
 }
-
-#include <stdio.h>
-int main (int argc, char *argv[])
-{
-	int number;
-
-	if (argc == 2)
-	{
-		number = ft_atoi_base(argv[1], 16);
-		printf("%d", number);
-	}
-	return (0);
-}
