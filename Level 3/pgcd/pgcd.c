@@ -19,13 +19,10 @@ int ft_pgcd(int n1, int n2)
 
 int main (int argc, char *argv[])
 {
-	int n1;
-	int n2;
-	int result;
+	int n1 = 0;
+	int n2 = 0;
+	int result = 0;
 
-	result = 0;
-	n1 = 0;
-	n2 = 0;
 	if (argc == 3)
 	{
 		n1 = atoi(argv[1]);
