@@ -48,8 +48,8 @@ int main (int argc, char *argv[])
 	{
 		while (argv[i] != NULL)
 		{
-			str = str_lower(argv[i]);
-			ft_toupper(str);
+			str = to_lower(argv[i]);
+			rstr_capitalizer(str);
 			i++;
 		}
 	}
