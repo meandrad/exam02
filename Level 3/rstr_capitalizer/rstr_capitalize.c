@@ -5,7 +5,7 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-char	*str_lower(char *str)
+char	*to_lower(char *str)
 {
 	int	i;
 	
@@ -19,7 +19,7 @@ char	*str_lower(char *str)
 	return (str);
 }
 
-void	ft_toupper(char *str)
+void	to_upper(char *str)
 {
 	int i;
 
