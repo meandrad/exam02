@@ -19,7 +19,7 @@ char	*to_lower(char *str)
 	return (str);
 }
 
-void	to_upper(char *str)
+void	rstr_capitalize(char *str)
 {
 	int i;
 
