@@ -18,7 +18,7 @@ size_t	ft_strspn(const char *s, const char *accept)
 			j++;
 		}
 		if (check == 0)
-		return (i);
+			return (i);
 		i++;
 	}
 	return (i);
