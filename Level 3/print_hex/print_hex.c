@@ -11,6 +11,7 @@ int	atoi(char *str)
 	int number;
 
 	i = 0;
+	number = 0;
 	while (str[i] != '\0' && (str[i] >= 48 && str[i] <= 57))
 	{
 		number = number * 10 + str[i] - 48;
@@ -18,14 +19,14 @@ int	atoi(char *str)
 	}
 	return (number);
 }
-void ft_puthex(int nbr)
+void	ft_puthex(unsigned int num)
 {
-	char *digits = "0123456789abcdef";
-
-	if (nbr >= 16)
-		ft_puthex(nbr / 16);
-	nbr = digits[nbr % 16];
-	ft_putchar(nbr);
+	if (num >= 16)
+		ft_puthex(num / 16);
+	if ((num % 16) < 10)
+		ft_putchar((num % 16) + '0');
+	else
+		ft_putchar((num % 16) - 10 + 'A');
 }
 int main (int argc, char *argv[])
 {
