@@ -26,7 +26,7 @@ void	ft_puthex(unsigned int num)
 	if ((num % 16) < 10)
 		ft_putchar((num % 16) + '0');
 	else
-		ft_putchar((num % 16) - 10 + 'A');
+		ft_putchar((num % 16) - 10 + 'a');
 }
 int main (int argc, char *argv[])
 {
