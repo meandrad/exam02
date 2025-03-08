@@ -26,14 +26,17 @@ int	count_number(int nbr)
 char *ft_itoa (int nbr)
 {
 	char	*s;
-	long	num;
 	int		length;
+	long	num;
 
+	num  = nbr;
 	length = count_number(nbr);
-	s = (char *)malloc(sizeof(char) * length + 1);
+	s = (char *)malloc(sizeof(char) * (length + 1));
 	if (!s)
 		return (NULL);
-	num = nbr;
+	s[length] = '\0';
+	if (num == 0)
+		s[0] = '0';
 	if (num < 0)
 	{
 		s[0] = '-';
@@ -42,8 +45,7 @@ char *ft_itoa (int nbr)
 	while (num > 0)
 	{
 		length--;
-		if (s[length] != '-')
-			s[length] = (num % 10) + '0';
+		s[length] = (num % 10) + '0';
 		num /= 10;
 	}
 	return (s);
